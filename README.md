@@ -15,7 +15,7 @@ Abra o terminal ou prompt de comando e navegue até a pasta onde o arquivo simul
 Digite o seguinte comando para executar o programa:
 
 ```
-python simulador_prova.py
+python Sistema_prova.py
 ```
 
 Siga as instruções na tela para informar as respostas de cada questão. O programa irá validar as respostas e calcular a nota do aluno.
