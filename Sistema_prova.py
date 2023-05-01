@@ -19,7 +19,7 @@ while True:
             questao += 1
             respostas.append(resposta)
         else:
-            print(Fore.RED + Style.BRIGHT + 'Resposta Invalida')
+            print(Fore.RED + Style.BRIGHT + 'Resposta Invalida' + Style.RESET_ALL)
         
     for s in range(len(gabarito)):
         if gabarito[s] == respostas[s]:
