@@ -15,12 +15,13 @@ while True:
     for i in range(len(gabarito)):
         resposta = input(Style.BRIGHT + f'Informe a resposta para a questao {questao} (A | B | C | D | E): ' + Style.RESET_ALL)
 
-        if resposta == 'A' or resposta == 'B' or resposta == 'C' or resposta == 'D' or resposta == 'E':
+        while resposta not in ['A', 'B', 'C', 'D', 'E']:
+            print(Fore.RED + Style.BRIGHT + 'Resposta Invalida' + Style.RESET_ALL)
+            resposta = input(Style.BRIGHT + f'Informe a resposta para a questao {questao} (A | B | C | D | E): ' + Style.RESET_ALL)
+        if resposta in ['A', 'B', 'C', 'D', 'E']:
             questao += 1
             respostas.append(resposta)
-        else:
-            print(Fore.RED + Style.BRIGHT + 'Resposta Invalida' + Style.RESET_ALL)
-        
+
     for s in range(len(gabarito)):
         if gabarito[s] == respostas[s]:
             pontos += 1 
@@ -42,4 +43,4 @@ menor_nota = min(notas_alunos)
 total_alunos = qtd_alunos
 media_turma = (sum(notas_alunos)) / total_alunos
 
-print(Fore.GREEN + Style.BRIGHT + f'Maior Nota: {maior_nota}\nMenor Nota: {menor_nota}\nTotal de alunos: {total_alunos}\nMedia da turma: {media_turma:.2f}' + Style.RESET_ALL)
+print(Fore.GREEN + Style.BRIGHT + f'Maior Nota: {maior_nota}\nMenor Nota: {menor_nota}\nTotal de alunos: {total_alunos}\nMedia da turma: {media_turma:.1f}' + Style.RESET_ALL)
